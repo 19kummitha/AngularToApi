@@ -1,0 +1,15 @@
+@import "bootstrap/dist/css/bootstrap.css";
+.card-body{
+    border:3px solid black
+}
+.card-header{
+    background-color: black;
+    color:white;
+    padding-left:65%;
+}
+.nav-item{
+    font-size: large;
+}
+.container{
+    padding-top: 500px;
+}

@@ -1,0 +1,28 @@
+<div class="container my-5">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email" >Email</label>
+        <input type="email" class="form-control" formControlName="email" [class.is-invalid]="validateControl('email')">
+        <span *ngIf="validateControlError('email', 'required')" class="text-danger">
+            Email is Mandatory
+        </span>
+        <span *ngIf="validateControlError('email','email')" class="text-danger">Email is Invalid</span>
+      </div>
+      <div class="form-group">
+        <label for="password" >Password</label>
+        <input type="password" class="form-control" formControlName="password" [class.is-invalid]="validateControl('password')">
+        <span *ngIf="validateControlError('password', 'required')" class="text-danger">
+            password is Mandatory
+        </span>
+        <span *ngIf="validateControlError('password','password')" class="text-danger">it doesn't meet requirements</span>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword" >Confirm Password</label>
+        <input type="password" class="form-control" formControlName="confirmPassword" [class.is-invalid]="validateControl('password')">
+        <span *ngIf="validateControlError('confirmPassword','passwordMismatch')" class="text-danger">it doesn't match</span>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+      </form>
+</div>
+    

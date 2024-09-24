@@ -1,0 +1,9 @@
+@import "bootstrap/dist/css/bootstrap.css";
+.loginform{
+    width:400px;
+    margin: auto;
+    border:2px solid black;
+}
+.form-control{
+    border: 2px solid black;
+}
